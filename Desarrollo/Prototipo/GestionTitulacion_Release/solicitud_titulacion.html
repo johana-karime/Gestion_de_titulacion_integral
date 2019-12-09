@@ -1,0 +1,312 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Solicitud de Titulación</title>
+<meta name="generator" content="WYSIWYG Web Builder 15 Trial Version - http://www.wysiwygwebbuilder.com">
+<script src="jscookmenu.min.js"></script>
+<link href="GestionTitulacion.css" rel="stylesheet">
+<link href="solicitud_titulacion.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script>
+function submitFrmSolicitud()
+{
+   var regexp;
+   var Editbox1 = document.getElementById('Editbox1');
+   if (!(Editbox1.disabled || Editbox1.style.display === 'none' || Editbox1.style.visibility === 'hidden'))
+   {
+      regexp = /^[A-Za-zÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ]*$/;
+      if (!regexp.test(Editbox1.value))
+      {
+         alert("El Nombre es un dato necesario");
+         Editbox1.focus();
+         return false;
+      }
+      if (Editbox1.value == "")
+      {
+         alert("El Nombre es un dato necesario");
+         Editbox1.focus();
+         return false;
+      }
+      if (Editbox1.value.length < 1)
+      {
+         alert("El Nombre es un dato necesario");
+         Editbox1.focus();
+         return false;
+      }
+   }
+   var Editbox2 = document.getElementById('Editbox2');
+   if (!(Editbox2.disabled || Editbox2.style.display === 'none' || Editbox2.style.visibility === 'hidden'))
+   {
+      if (Editbox2.value == "")
+      {
+         alert("El No. Control es un dato necesario");
+         Editbox2.focus();
+         return false;
+      }
+      if (Editbox2.value.length < 1)
+      {
+         alert("El No. Control es un dato necesario");
+         Editbox2.focus();
+         return false;
+      }
+   }
+   var Editbox3 = document.getElementById('Editbox3');
+   if (!(Editbox3.disabled || Editbox3.style.display === 'none' || Editbox3.style.visibility === 'hidden'))
+   {
+      if (Editbox3.value == "")
+      {
+         alert("La Carrera es un dato necesario");
+         Editbox3.focus();
+         return false;
+      }
+      if (Editbox3.value.length < 1)
+      {
+         alert("La Carrera es un dato necesario");
+         Editbox3.focus();
+         return false;
+      }
+   }
+   var Editbox4 = document.getElementById('Editbox4');
+   if (!(Editbox4.disabled || Editbox4.style.display === 'none' || Editbox4.style.visibility === 'hidden'))
+   {
+      if (Editbox4.value == "")
+      {
+         alert("El Producto es un dato necesario");
+         Editbox4.focus();
+         return false;
+      }
+      if (Editbox4.value.length < 1)
+      {
+         alert("El Producto es un dato necesario");
+         Editbox4.focus();
+         return false;
+      }
+   }
+   var Editbox5 = document.getElementById('Editbox5');
+   if (!(Editbox5.disabled || Editbox5.style.display === 'none' || Editbox5.style.visibility === 'hidden'))
+   {
+      if (Editbox5.value == "")
+      {
+         alert("La Dirección es un dato necesario");
+         Editbox5.focus();
+         return false;
+      }
+      if (Editbox5.value.length < 1)
+      {
+         alert("La Dirección es un dato necesario");
+         Editbox5.focus();
+         return false;
+      }
+   }
+   var Editbox7 = document.getElementById('Editbox7');
+   if (!(Editbox7.disabled || Editbox7.style.display === 'none' || Editbox7.style.visibility === 'hidden'))
+   {
+      if (Editbox7.value == "")
+      {
+         alert("El Correo Electrónico es un dato necesario");
+         Editbox7.focus();
+         return false;
+      }
+      if (Editbox7.value.length < 1)
+      {
+         alert("El Correo Electrónico es un dato necesario");
+         Editbox7.focus();
+         return false;
+      }
+   }
+   var FileUpload1 = document.getElementById('FileUpload1');
+   var FileUpload1_file = document.getElementById('FileUpload1-file');
+   if (!(FileUpload1.disabled ||
+         FileUpload1.style.display === 'none' ||
+         FileUpload1.style.visibility === 'hidden'))
+   {
+      if (FileUpload1_file.value == "")
+      {
+         alert("Es necesario la Carta de no Inconveniencia");
+         return false;
+      }
+      var ext = FileUpload1_file.value.substr(FileUpload1_file.value.lastIndexOf('.'));
+      if ((ext.toLowerCase() != ".pdf"))
+      {
+         alert("Es necesario la Carta de no Inconveniencia");
+         return false;
+      }
+   }
+   var FileUpload2 = document.getElementById('FileUpload2');
+   var FileUpload2_file = document.getElementById('FileUpload2-file');
+   if (!(FileUpload2.disabled ||
+         FileUpload2.style.display === 'none' ||
+         FileUpload2.style.visibility === 'hidden'))
+   {
+      if (FileUpload2_file.value == "")
+      {
+         alert("Es necesario el Informe del Proyecto");
+         return false;
+      }
+      var ext = FileUpload2_file.value.substr(FileUpload2_file.value.lastIndexOf('.'));
+      if ((ext.toLowerCase() != ".pdf"))
+      {
+         alert("Es necesario el Informe del Proyecto");
+         return false;
+      }
+   }
+   var Editbox6 = document.getElementById('Editbox6');
+   if (!(Editbox6.disabled || Editbox6.style.display === 'none' || Editbox6.style.visibility === 'hidden'))
+   {
+      if (Editbox6.value == "")
+      {
+         alert("La Dirección es un dato necesario");
+         Editbox6.focus();
+         return false;
+      }
+      if (Editbox6.value.length < 1)
+      {
+         alert("La Dirección es un dato necesario");
+         Editbox6.focus();
+         return false;
+      }
+   }
+   return true;
+}
+</script>
+<script>
+$(document).ready(function()
+{
+   $("#FileUpload1 :file").on('change', function()
+   {
+      var input = $(this).parents('.input-group').find(':text');
+      input.val($(this).val());
+   });
+   $("#FileUpload2 :file").on('change', function()
+   {
+      var input = $(this).parents('.input-group').find(':text');
+      input.val($(this).val());
+   });
+});
+</script>
+</head>
+<body>
+<div id="container">
+<a href="http://www.wysiwygwebbuilder.com" target="_blank"><img src="images/builtwithwwb15.png" alt="WYSIWYG Web Builder" style="position:absolute;left:682px;top:50px;margin: 0;border-width:0;z-index:250"></a>
+<div id="wb_Form1" style="position:absolute;left:386px;top:124px;width:487px;height:449px;z-index:27;">
+<form name="FrmSolicitud" method="get" action="<?php echo basename(__FILE__); ?>" enctype="multipart/form-data" id="Form1" onsubmit="if(!submitFrmSolicitud()) return false;alert('Datos Guardados Correctamente');document.getElementById('Form1').reset();return false;">
+<label for="Editbox1" id="Label1" style="position:absolute;left:51px;top:92px;width:156px;height:16px;line-height:16px;z-index:3;">NOMBRE:</label>
+<input type="text" id="Editbox1" style="position:absolute;left:235px;top:91px;width:190px;height:16px;z-index:4;" name="Editbox1" value="" spellcheck="false">
+<label for="Editbox2" id="Label2" style="position:absolute;left:51px;top:123px;width:156px;height:16px;line-height:16px;z-index:5;">NO. CONTROL:</label>
+<input type="text" id="Editbox2" style="position:absolute;left:235px;top:122px;width:190px;height:16px;z-index:6;" name="Editbox2" value="" spellcheck="false">
+<label for="Editbox3" id="Label3" style="position:absolute;left:50px;top:154px;width:156px;height:16px;line-height:16px;z-index:7;">CARRERA:</label>
+<input type="text" id="Editbox3" style="position:absolute;left:234px;top:153px;width:190px;height:16px;z-index:8;" name="Editbox3" value="" spellcheck="false">
+<label for="Combobox1" id="Label4" style="position:absolute;left:50px;top:185px;width:156px;height:16px;line-height:16px;z-index:9;">PROYECTO:</label>
+<select name="Combobox1" size="1" id="Combobox1" style="position:absolute;left:234px;top:184px;width:200px;height:28px;z-index:10;">
+<option selected value="1">Punto de Venta</option>
+<option value="2">Control Escolar</option>
+<option value="3">Puntos Extras</option>
+</select>
+<label for="Editbox4" id="Label5" style="position:absolute;left:49px;top:218px;width:156px;height:16px;line-height:16px;z-index:11;">PRODUCTO:</label>
+<input type="text" id="Editbox4" style="position:absolute;left:234px;top:217px;width:190px;height:16px;z-index:12;" name="Editbox4" value="" spellcheck="false">
+<label for="Editbox5" id="Label6" style="position:absolute;left:49px;top:249px;width:156px;height:16px;line-height:16px;z-index:13;">DIRECCIÓN:</label>
+<input type="text" id="Editbox5" style="position:absolute;left:233px;top:248px;width:190px;height:16px;z-index:14;" name="Editbox5" value="" spellcheck="false">
+<label for="Editbox6" id="Label7" style="position:absolute;left:49px;top:280px;width:156px;height:16px;line-height:16px;z-index:15;">TELÉFONO:</label>
+<label for="Editbox7" id="Label8" style="position:absolute;left:49px;top:311px;width:165px;height:16px;line-height:16px;z-index:16;">CORREO ELECTRÓNICO:</label>
+<input type="text" id="Editbox7" style="position:absolute;left:233px;top:310px;width:190px;height:16px;z-index:17;" name="Editbox7" value="" spellcheck="false">
+<label for="FileUpload1" id="Label9" style="position:absolute;left:49px;top:342px;width:165px;height:16px;line-height:16px;z-index:18;">Carta de no Inconveniencia:</label>
+<div id="FileUpload1" class="input-group" style="position:absolute;left:233px;top:341px;width:200px;height:26px;z-index:19;">
+<input class="form-control" type="text" readonly="">
+<label class="input-group-btn">
+<input type="file" accept=".pdf" name="FileUpload1" id="FileUpload1-file" style="display:none;"><span class="btn">Selecionar...</span>
+</label>
+</div>
+<label for="FileUpload2" id="Label10" style="position:absolute;left:49px;top:373px;width:156px;height:16px;line-height:16px;z-index:20;">Informe de Proyecto:</label>
+<div id="FileUpload2" class="input-group" style="position:absolute;left:233px;top:372px;width:200px;height:26px;z-index:21;">
+<input class="form-control" type="text" readonly="">
+<label class="input-group-btn">
+<input type="file" accept=".pdf" name="FileUpload2" id="FileUpload2-file" style="display:none;"><span class="btn">Selecionar...</span>
+</label>
+</div>
+<input type="submit" id="Button1" name="" value="GUARDAR" style="position:absolute;left:313px;top:408px;width:119px;height:25px;z-index:22;">
+<div id="wb_Image1" style="position:absolute;left:414px;top:18px;width:59px;height:59px;z-index:23;">
+<img src="images/Documento.png" id="Image1" alt=""></div>
+<div id="wb_Heading1" style="position:absolute;left:37px;top:18px;width:413px;height:59px;z-index:24;">
+<h3 id="Heading1">SOLICITUD DE TITULACIÓN INTEGRAL</h3></div>
+<input type="text" id="Editbox6" style="position:absolute;left:233px;top:279px;width:190px;height:16px;z-index:25;" name="Editbox5" value="" spellcheck="false">
+</form>
+</div>
+<a href="http://www.wysiwygwebbuilder.com" target="_blank"><img src="images/builtwithwwb15.png" alt="WYSIWYG Web Builder" style="position:absolute;left:383px;top:592px;margin: 0;border-width:0;z-index:250"></a>
+</div>
+<div id="PageHeader1" style="position:absolute;text-align:left;left:0px;top:0px;width:100%;height:95px;z-index:7777;">
+<div id="wb_MenuBar1" style="position:absolute;left:168px;top:15px;width:944px;height:80px;z-index:1000;">
+<div id="MenuBar1">
+<ul style="display:none;">
+<li><span></span><a href="./solicitud_titulacion.html" target="_self">Solicitud&nbsp;Titulaci&#243;n</a>
+</li>
+</ul>
+</div>
+<script>
+var cmMenuBar1 =
+{
+   mainFolderLeft: '',
+   mainFolderRight: '',
+   mainItemLeft: '',
+   mainItemRight: '',
+   folderLeft: '',
+   folderRight: '',
+   itemLeft: '',
+   itemRight: '',
+   mainSpacing: 0,
+   subSpacing: 0,
+   delay: 100,
+   offsetHMainAdjust: [0, 0],
+   offsetSubAdjust: [0, 0]
+};
+var cmMenuBar1HSplit = [_cmNoClick, '<td class="MenuBar1MenuSplitLeft"><div></div></td>' +
+                                       '<td class="MenuBar1MenuSplitText"><div></div></td>' +
+                                       '<td class="MenuBar1MenuSplitRight"><div></div></td>'];
+var cmMenuBar1MainVSplit = [_cmNoClick, '<div><table width="15" cellspacing="0"><tr><td class="MenuBar1HorizontalSplit">|</td></tr></table></div>'];
+var cmMenuBar1MainHSplit = [_cmNoClick, '<td colspan="3" class="MenuBar1MainSplitText"><div></div></td>'];
+cmDrawFromText('MenuBar1', 'hbr', cmMenuBar1, 'MenuBar1');
+</script>
+</div>
+<div id="wb_MenuBar2" style="position:absolute;left:1150px;top:58px;width:75px;height:24px;z-index:1001;">
+<div id="MenuBar2">
+<ul style="display:none;">
+<li><span></span><span>Estudiante</span>
+<ul>
+<li><span></span><a href="./index.html" target="_self">Cerrar&nbsp;Sesi&#243;n</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<script>
+var cmMenuBar2 =
+{
+   mainFolderLeft: '',
+   mainFolderRight: '',
+   mainItemLeft: '',
+   mainItemRight: '',
+   folderLeft: '',
+   folderRight: '',
+   itemLeft: '',
+   itemRight: '',
+   mainSpacing: 0,
+   subSpacing: 0,
+   delay: 100,
+   offsetHMainAdjust: [0, 0],
+   offsetSubAdjust: [0, 0]
+};
+var cmMenuBar2HSplit = [_cmNoClick, '<td class="MenuBar2MenuSplitLeft"><div></div></td>' +
+                                       '<td class="MenuBar2MenuSplitText"><div></div></td>' +
+                                       '<td class="MenuBar2MenuSplitRight"><div></div></td>'];
+var cmMenuBar2MainVSplit = [_cmNoClick, '<div><table width="15" cellspacing="0"><tr><td class="MenuBar2HorizontalSplit">|</td></tr></table></div>'];
+var cmMenuBar2MainHSplit = [_cmNoClick, '<td colspan="3" class="MenuBar2MainSplitText"><div></div></td>'];
+cmDrawFromText('MenuBar2', 'hbr', cmMenuBar2, 'MenuBar2');
+</script>
+</div>
+<div id="wb_IconFont2" style="position:absolute;left:1125px;top:0px;width:124px;height:59px;text-align:center;z-index:2;">
+<div id="IconFont2"><i class="material-icons">&#xe853;</i></div></div>
+</div>
+<div id="PageFooter1" style="position:absolute;overflow:hidden;text-align:left;left:0px;top:953px;width:100%;height:90px;z-index:29;">
+</div>
+</body>
+</html>

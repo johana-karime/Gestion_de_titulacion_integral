@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="generator" content="WYSIWYG Web Builder 15 Trial Version - http://www.wysiwygwebbuilder.com">
+<link href="GestionTitulacion.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<script>
+function submitInicio_de_Sesión_()
+{
+   var regexp;
+   var TxtUsuario = document.getElementById('TxtUsuario');
+   if (!(TxtUsuario.disabled || TxtUsuario.style.display === 'none' || TxtUsuario.style.visibility === 'hidden'))
+   {
+      if (TxtUsuario.value == "")
+      {
+         alert("El Nombre de Usuario es Necesario");
+         TxtUsuario.focus();
+         return false;
+      }
+      if (TxtUsuario.value.length < 1)
+      {
+         alert("El Nombre de Usuario es Necesario");
+         TxtUsuario.focus();
+         return false;
+      }
+   }
+   var TxtContrasenia = document.getElementById('TxtContrasenia');
+   if (!(TxtContrasenia.disabled || TxtContrasenia.style.display === 'none' || TxtContrasenia.style.visibility === 'hidden'))
+   {
+      if (TxtContrasenia.value == "")
+      {
+         alert("La Contraseña es Necesaria");
+         TxtContrasenia.focus();
+         return false;
+      }
+      if (TxtContrasenia.value.length < 1)
+      {
+         alert("La Contraseña es Necesaria");
+         TxtContrasenia.focus();
+         return false;
+      }
+   }
+   return true;
+}
+</script>
+</head>
+<body>
+<a href="http://www.wysiwygwebbuilder.com" target="_blank"><img src="images/builtwithwwb15.png" alt="WYSIWYG Web Builder" style="position:absolute;left:441px;top:967px;margin: 0;border-width:0;z-index:250"></a>
+<a id="Button1" href="./master_frames/master_frame_estudiante.html" style="position:absolute;left:148px;top:19px;width:525px;height:62px;z-index:7;"></a>
+<label for="" id="Label3" style="position:absolute;left:155px;top:3px;width:527px;height:94px;line-height:94px;z-index:8;">Gestion para la Titulación Integral</label>
+<div id="wb_Form1" style="position:absolute;left:143px;top:148px;width:543px;height:252px;z-index:9;">
+<form name="Inicio_de_Sesión_" method="post" action="" enctype="multipart/form-data" id="Form1" onsubmit="if(!submitInicio_de_Sesión_()) return false;var usuario = document.getElementById('TxtUsuario').value; if(usuario == 'admin'){ window.location.assign('gestion_cuentas.html'); }else if(usuario == 'jdep'){ window.location.assign('inicio_jefedep.html'); }else if(usuario == 'estud'){  window.location.assign('inicio_estudiante.html'); }else{alert('Usuario y/o Contraseña incorrectos');};return false;">
+<div id="wb_IconFont2" style="position:absolute;left:0px;top:0px;width:100px;height:100px;text-align:center;z-index:0;">
+<div id="IconFont2"><i class="material-icons">&#xe853;</i></div></div>
+<label for="" id="Label4" style="position:absolute;left:111px;top:15px;width:92px;height:92px;line-height:92px;z-index:1;">USUARIO:</label>
+<label for="" id="Label5" style="position:absolute;left:111px;top:90px;width:92px;height:92px;line-height:92px;z-index:2;">CONTRASEÑA:</label>
+<input type="text" id="TxtUsuario" style="position:absolute;left:115px;top:85px;width:312px;height:20px;z-index:3;" name="Editbox1" value="" spellcheck="false">
+<input type="password" id="TxtContrasenia" style="position:absolute;left:115px;top:160px;width:312px;height:20px;z-index:4;" name="Editbox1" value="" spellcheck="false">
+<input type="submit" id="BtnIngresar" name="" value="Ingresar" style="position:absolute;left:115px;top:207px;width:104px;height:27px;z-index:5;">
+</form>
+</div>
+</body>
+</html>

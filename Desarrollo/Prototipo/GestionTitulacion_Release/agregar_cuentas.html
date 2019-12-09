@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="generator" content="WYSIWYG Web Builder 15 Trial Version - http://www.wysiwygwebbuilder.com">
+<script src="jscookmenu.min.js"></script>
+<link href="GestionTitulacion.css" rel="stylesheet">
+<link href="agregar_cuentas.css" rel="stylesheet">
+<script>
+function submitFrmgestioncuenta()
+{
+   var regexp;
+   var Editbox1 = document.getElementById('Editbox1');
+   if (!(Editbox1.disabled || Editbox1.style.display === 'none' || Editbox1.style.visibility === 'hidden'))
+   {
+      regexp = /^[A-Za-zÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ]*$/;
+      if (!regexp.test(Editbox1.value))
+      {
+         alert("El Nombre es un dato necesario");
+         Editbox1.focus();
+         return false;
+      }
+      if (Editbox1.value == "")
+      {
+         alert("El Nombre es un dato necesario");
+         Editbox1.focus();
+         return false;
+      }
+      if (Editbox1.value.length < 1)
+      {
+         alert("El Nombre es un dato necesario");
+         Editbox1.focus();
+         return false;
+      }
+   }
+   var Editbox2 = document.getElementById('Editbox2');
+   if (!(Editbox2.disabled || Editbox2.style.display === 'none' || Editbox2.style.visibility === 'hidden'))
+   {
+      if (Editbox2.value == "")
+      {
+         alert("El No. Control es un dato necesario");
+         Editbox2.focus();
+         return false;
+      }
+      if (Editbox2.value.length < 1)
+      {
+         alert("El No. Control es un dato necesario");
+         Editbox2.focus();
+         return false;
+      }
+   }
+   var Editbox3 = document.getElementById('Editbox3');
+   if (!(Editbox3.disabled || Editbox3.style.display === 'none' || Editbox3.style.visibility === 'hidden'))
+   {
+      if (Editbox3.value == "")
+      {
+         alert("La Carrera es un dato necesario");
+         Editbox3.focus();
+         return false;
+      }
+      if (Editbox3.value.length < 1)
+      {
+         alert("La Carrera es un dato necesario");
+         Editbox3.focus();
+         return false;
+      }
+   }
+   var Editbox4 = document.getElementById('Editbox4');
+   if (!(Editbox4.disabled || Editbox4.style.display === 'none' || Editbox4.style.visibility === 'hidden'))
+   {
+      if (Editbox4.value == "")
+      {
+         alert("El Producto es un dato necesario");
+         Editbox4.focus();
+         return false;
+      }
+      if (Editbox4.value.length < 1)
+      {
+         alert("El Producto es un dato necesario");
+         Editbox4.focus();
+         return false;
+      }
+   }
+   var Editbox6 = document.getElementById('Editbox6');
+   if (!(Editbox6.disabled || Editbox6.style.display === 'none' || Editbox6.style.visibility === 'hidden'))
+   {
+      if (Editbox6.value == "")
+      {
+         alert("El Producto es un dato necesario");
+         Editbox6.focus();
+         return false;
+      }
+      if (Editbox6.value.length < 1)
+      {
+         alert("El Producto es un dato necesario");
+         Editbox6.focus();
+         return false;
+      }
+   }
+   return true;
+}
+</script>
+</head>
+<body>
+<div id="container">
+<a href="http://www.wysiwygwebbuilder.com" target="_blank"><img src="images/builtwithwwb15.png" alt="WYSIWYG Web Builder" style="position:absolute;left:682px;top:50px;margin: 0;border-width:0;z-index:250"></a>
+<a href="http://www.wysiwygwebbuilder.com" target="_blank"><img src="images/builtwithwwb15.png" alt="WYSIWYG Web Builder" style="position:absolute;left:745px;top:1062px;margin: 0;border-width:0;z-index:250"></a>
+<div id="wb_Form1" style="position:absolute;left:459px;top:120px;width:487px;height:449px;z-index:20;">
+<form name="Frmgestioncuenta" method="get" action="<?php echo basename(__FILE__); ?>" enctype="multipart/form-data" id="Form1" onsubmit="if(!submitFrmgestioncuenta()) return false;alert('Datos Guardados Correctamente');document.getElementById('Form1').reset();return false;">
+<label for="Label2" id="Label1" style="position:absolute;left:51px;top:92px;width:156px;height:16px;line-height:16px;z-index:3;">ID:</label>
+<input type="text" id="Editbox1" style="position:absolute;left:235px;top:91px;width:190px;height:16px;z-index:4;" name="Editbox1" value="" spellcheck="false">
+<label for="Label3" id="Label2" style="position:absolute;left:51px;top:123px;width:156px;height:16px;line-height:16px;z-index:5;">NOMBREUSUARIO</label>
+<input type="text" id="Editbox2" style="position:absolute;left:235px;top:122px;width:190px;height:16px;z-index:6;" name="Editbox2" value="" spellcheck="false">
+<label for="Label4" id="Label3" style="position:absolute;left:50px;top:154px;width:156px;height:16px;line-height:16px;z-index:7;">CONTRASEÑA:</label>
+<input type="text" id="Editbox3" style="position:absolute;left:234px;top:153px;width:190px;height:16px;z-index:8;" name="Editbox3" value="" spellcheck="false">
+<label for="Label5" id="Label4" style="position:absolute;left:50px;top:185px;width:156px;height:16px;line-height:16px;z-index:9;">NOMBRE:</label>
+<label for="Label6" id="Label5" style="position:absolute;left:49px;top:218px;width:156px;height:16px;line-height:16px;z-index:10;">CORREO:</label>
+<input type="text" id="Editbox4" style="position:absolute;left:234px;top:217px;width:190px;height:16px;z-index:11;" name="Editbox4" value="" spellcheck="false">
+<label for="Button2" id="Label6" style="position:absolute;left:49px;top:249px;width:156px;height:16px;line-height:16px;z-index:12;">TIPO</label>
+<input type="submit" id="Button1" name="" value="GUARDAR" style="position:absolute;left:213px;top:395px;width:119px;height:25px;z-index:13;">
+<div id="wb_Heading1" style="position:absolute;left:111px;top:19px;width:265px;height:59px;z-index:14;">
+<h3 id="Heading1">AGREGAR CUENTA</h3></div>
+<input type="text" id="Editbox6" style="position:absolute;left:233px;top:184px;width:190px;height:16px;z-index:15;" name="Editbox4" value="" spellcheck="false">
+<a id="Button2" href="./gestion_cuentas.html" style="position:absolute;left:344px;top:395px;width:117px;height:23px;z-index:16;">CANCELAR</a>
+<select name="Combobox1" size="1" id="Combobox1" style="position:absolute;left:233px;top:249px;width:200px;height:28px;z-index:17;">
+<option selected value="1">Administrador</option>
+<option value="2">Jefe de departamento</option>
+<option value="3">Estudiante</option>
+</select>
+</form>
+</div>
+</div>
+<div id="PageHeader1" style="position:absolute;text-align:left;left:0px;top:0px;width:100%;height:95px;z-index:7777;">
+<div id="wb_MenuBar1" style="position:absolute;left:50px;top:21px;width:896px;height:60px;z-index:1000;">
+<div id="MenuBar1">
+<ul style="display:none;">
+<li><span></span><a href="./gestion_cuentas.html" target="_self">Gestionar&nbsp;Usuarios</a>
+</li>
+</ul>
+</div>
+<script>
+var cmMenuBar1 =
+{
+   mainFolderLeft: '',
+   mainFolderRight: '',
+   mainItemLeft: '',
+   mainItemRight: '',
+   folderLeft: '',
+   folderRight: '',
+   itemLeft: '',
+   itemRight: '',
+   mainSpacing: 0,
+   subSpacing: 0,
+   delay: 100,
+   offsetHMainAdjust: [0, 0],
+   offsetSubAdjust: [0, 0]
+};
+var cmMenuBar1HSplit = [_cmNoClick, '<td class="MenuBar1MenuSplitLeft"><div></div></td>' +
+                                       '<td class="MenuBar1MenuSplitText"><div></div></td>' +
+                                       '<td class="MenuBar1MenuSplitRight"><div></div></td>'];
+var cmMenuBar1MainVSplit = [_cmNoClick, '<div><table width="15" cellspacing="0"><tr><td class="MenuBar1HorizontalSplit">|</td></tr></table></div>'];
+var cmMenuBar1MainHSplit = [_cmNoClick, '<td colspan="3" class="MenuBar1MainSplitText"><div></div></td>'];
+cmDrawFromText('MenuBar1', 'hbr', cmMenuBar1, 'MenuBar1');
+</script>
+</div>
+<div id="wb_IconFont2" style="position:absolute;left:1115px;top:6px;width:124px;height:59px;text-align:center;z-index:1;">
+<div id="IconFont2"><i class="material-icons">&#xe853;</i></div></div>
+<div id="wb_MenuBar2" style="position:absolute;left:1132px;top:64px;width:92px;height:24px;z-index:1002;">
+<div id="MenuBar2">
+<ul style="display:none;">
+<li><span></span><span>Administrador</span>
+<ul>
+<li><span></span><a href="./index.html" target="_self">Cerrar&nbsp;Sesi&#243;n</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<script>
+var cmMenuBar2 =
+{
+   mainFolderLeft: '',
+   mainFolderRight: '',
+   mainItemLeft: '',
+   mainItemRight: '',
+   folderLeft: '',
+   folderRight: '',
+   itemLeft: '',
+   itemRight: '',
+   mainSpacing: 0,
+   subSpacing: 0,
+   delay: 100,
+   offsetHMainAdjust: [0, 0],
+   offsetSubAdjust: [0, 0]
+};
+var cmMenuBar2HSplit = [_cmNoClick, '<td class="MenuBar2MenuSplitLeft"><div></div></td>' +
+                                       '<td class="MenuBar2MenuSplitText"><div></div></td>' +
+                                       '<td class="MenuBar2MenuSplitRight"><div></div></td>'];
+var cmMenuBar2MainVSplit = [_cmNoClick, '<div><table width="15" cellspacing="0"><tr><td class="MenuBar2HorizontalSplit">|</td></tr></table></div>'];
+var cmMenuBar2MainHSplit = [_cmNoClick, '<td colspan="3" class="MenuBar2MainSplitText"><div></div></td>'];
+cmDrawFromText('MenuBar2', 'hbr', cmMenuBar2, 'MenuBar2');
+</script>
+</div>
+</div>
+<div id="Layer1" style="position:relative;text-align:left;width:100%;height:100%;float:left;display:block;z-index:21;">
+</div>
+<div id="PageFooter1" style="position:absolute;overflow:hidden;text-align:left;left:0px;top:1093px;width:100%;height:90px;z-index:22;">
+</div>
+</body>
+</html>
